@@ -26,4 +26,4 @@ jobs:
         SOURCE: "/home/ubuntu/hello-world-1/webapp/target/webapp.war"
         REMOTE_HOST: "44.211.151.74"
         REMOTE_USER: "ubuntu"
-        TARGET: "/home/ubuntu/opt/tomcat/webapps"
+        TARGET: "/opt/tomcat/webapps"
