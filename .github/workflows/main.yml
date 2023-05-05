@@ -21,13 +21,3 @@ jobs:
         java-version: ${{ env.JAVA_VERSION }}
     - name: Build with Maven
       run: mvn package 
-      
-    - name: Deploy to my EC2 instance
-      uses: easingthemes/ssh-deploy@v2.1.5
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-        SOURCE: "./"
-        REMOTE_HOST: "44.211.151.74"
-        REMOTE_USER: "ubuntu"
-        TARGET: "/home/ubuntu/tmp"
-        run: cd /home/ubuntu/tmp && sudo cp /webapp/target/webapp.war /opt/tomcat/webapps/webapp
