@@ -26,4 +26,5 @@ jobs:
         SOURCE: "/home/ubuntu/hello-world-1/webapp/target/webapp.war"
         REMOTE_HOST: "44.211.151.74"
         REMOTE_USER: "ubuntu"
-        TARGET: "/opt/tomcat/webapps"
+        TARGET: "/home/ubuntu/tmp"
+        run: cd /home/ubuntu/tmp && cp -r /opt/tomcat/webapps
