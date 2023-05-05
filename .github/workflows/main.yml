@@ -23,8 +23,10 @@ jobs:
       uses: easingthemes/ssh-deploy@v2.1.5
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
-        SOURCE: "/home/ubuntu/hello-world-1/webapp/target/webapp.war"
+        SOURCE: "./"
         REMOTE_HOST: "44.211.151.74"
         REMOTE_USER: "ubuntu"
         TARGET: "/home/ubuntu/tmp"
-        run: cd /home/ubuntu/tmp && cp -r /opt/tomcat/webapps
+        run: cd /home/ubuntu/tmp && sudo cp /webapp/target/webapp.war /opt/tomcat/webapps/webapp
+
+
